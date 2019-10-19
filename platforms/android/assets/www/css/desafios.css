@@ -1,0 +1,20 @@
+.card{
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position-x: center;
+}
+.card .card-title {
+    font-weight: 400;
+}
+
+.modal.bottom-sheet {
+    min-height: 100% !important;
+}
+
+.range-slider h6{
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: #0c676b;
+    font-size: medium;
+
+}

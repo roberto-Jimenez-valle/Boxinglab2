@@ -1,0 +1,19 @@
+1 – Generar el archivo .apk de la aplicación.
+
+cd /Desktop/apps/appboxinglab/
+
+sudo cordova build android --release
+
+2- Generar la llave privada.
+sudo keytool -genkey -v -keystore llavedetuaplicacion.keystore -alias boxinglab -keyalg RSA -keysize 2048 -validity 999999
+
+
+3- Firmar la aplicación.
+Para firmar la aplicación utilizaremos la herramienta jarsigner de la siguiente manera
+
+sudo jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore llavedetuaplicacion.keystore platforms/android/build/outputs/apk/android-release-unsigned.apk boxinglab
+
+4- Alinear la aplicación.
+
+Alinear la aplicación trata de optimizar el paquete .apk adaptándolo a los requisitos óptimos del sistema Android. Para ello utilizaremos la herramienta zipalign. En mi caso, que utilizo Arch Linux, si ejecuto zipalign directamente en la terminal me dará el error “bash: zipalign: no se encontró la orden”. Por ello he de ejecutar zipalign desde el directorio donde se encuentra. En mi caso está en /opt/android-sdk/build-tools/20.0.0/. Por lo tanto, el código para alinear la aplicación queda así:
+sudo /Users/robertojimenez/Library/Android/sdk/build-tools/27.0.3/zipalign -v 4 /Users/robertojimenez/Desktop/apps/appboxinglab/platforms/android/build/outputs/apk/android-release-unsigned.apk /Users/robertojimenez/Desktop/apps/appboxinglab/platforms/android/build/outputs/apk/boxinglab.apk

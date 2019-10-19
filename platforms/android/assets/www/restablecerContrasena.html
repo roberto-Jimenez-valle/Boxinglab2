@@ -1,0 +1,32 @@
+
+<div class="z-depth-5 panel-login lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #000;">
+
+    <form class="col s12" id="restablecerContrasena" method="post">
+        
+        <div class='row'>
+                
+            <h4 data-tr="cambia_contrasena">Cambiar o recuperar contraseña</h4>
+            <div class='input-field col s12'>
+                <i class="material-icons prefix">account_circle</i>
+                <input class='validate' type='email' name='emal' id='emal' />
+                <label for='emal' data-tr="email">Email</label>
+            </div>
+        </div>
+
+        <div class='row' id="textOK" style="display:none">
+            <h5 data-tr="se_envio_correo">Se envió un correo electrónico a tu cuenta para que puedas restablecer tu contraseña</h5>
+        </div>
+        <div class='row' id="textKO" style="display:none">
+                <h5 data-tr="error_email">Error el correo introducido no existe en nuestra base de datos</h5>
+            </div>
+        <br />
+            <div class='row btn-accion'>
+                <a onclick="_.getCtrl().restablecerContrasena(_.get('restablecerContrasena'))" class='col s5 right btn btn-large waves-effect indigo login' data-tr="enviar">Enviar</a>
+                <a href="index.html" style="margin-right:20px;" class='col s5 right btn btn-large waves-effect indigo' data-tr="cancelar">Cancelar</a>
+            </div>
+            <div class='row btn-volver' style="display:none" >
+                <a href="index.html/?sesion=1" class='col s5 right btn btn-large waves-effect indigo' data-tr="volver-inicio">Volver</a>
+            </div>
+    </form>
+</div>
+<script type="text/javascript" src="js/restablecerContrasena.js"></script>

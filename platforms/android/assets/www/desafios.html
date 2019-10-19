@@ -1,0 +1,283 @@
+<link href="css/desafios.css" rel="stylesheet">
+<link href="css/bubble.css" rel="stylesheet">
+
+<div class="desafios-all">
+    <div class="row col center 12 m6" >
+        <div class="card" style="background-image: url(img/rutinaboxeo.jpg);background-color: black;">
+            <a class="btn-floating halfway-fab waves-effect waves-light b3 btn modal-trigger" href="#modalrutinabase">
+                <i class="material-icons">add</i>
+            </a>
+            <a class="modal-trigger" href="#modalrutinabase">
+                <div class="c4">
+                    <span class="card-title" data-tr="rutina_asaltos">Rutina de asaltos</span>
+                </div>
+                <div class="card-content c4" style="height: 125px;font-size: larger;">
+                    <p data-tr="rutina_asaltos_body">Decide cuanto quieres que dure cada asalto, el numero de asaltos y el tiempo de descanso entre cada uno</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row col center 12 m6">
+        <div class="card" style="
+        background-image: url(img/Box_Men.jpg);background-color: black;">
+            <a class="btn-floating halfway-fab waves-effect waves-light b3 btn modal-trigger" href="#modalgolpes">
+                <i class="material-icons">add</i>
+            </a>
+            <a class="modal-trigger" href="#modalgolpes">
+                <div class="c4">
+                    <span class="card-title" data-tr="maximo_golpes">Maximo de golpes</span>
+
+                </div>
+                <div class="card-content c4" style="height: 125px;/* background-image: url(/img/tugolpe.jpg); */font-size: larger;">
+                    <p data-tr="maximo_golpes_body">Fijate un objetivo de golpes por cada sesión</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row col center 12 m6">
+        <div class="card" style="
+        background-image: url(img/boseovssaco.jpg);background-color: black;">
+            <a class="btn-floating halfway-fab waves-effect waves-light b3 btn modal-trigger" href="#modalvssaco">
+                <i class="material-icons">add</i>
+            </a>
+            <a class="modal-trigger" href="#modalvssaco">
+                <div class="c4">
+                    <span class="card-title" data-tr="boseador_saco">Boxeador VS Saco</span>
+
+                </div>
+                <div class="card-content c4" style="height: 125px;font-size: larger;">
+                    <p data-tr="boseador_saco_body">Golpea al saco hasta poder vencerle, el tiempo sin golpear jugara en tu contra</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!--<div class="row col center 12 m6">
+        <div class="card" style="
+        background-image: url(img/DesafioCara.png);background-color: black;">
+            <a class="btn-floating halfway-fab waves-effect waves-light b3 btn modal-trigger muestraFaces" >
+                <i class="material-icons">add</i>
+            </a>
+            <a class="modal-trigger muestraFaces" >
+                <div class="c4">
+                    <span class="card-title" data-tr="boseador_saco">Elige a tu adversario</span>
+                </div>
+                <div class="card-content c4" style="height: 125px;font-size: larger;">
+                    <p data-tr="boseador_saco_body">Golpea al saco hasta poder vencerle, el tiempo sin golpear jugara en tu contra
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>-->
+</div>
+<!-- Modal Structure rutina base -->
+<div id="modalrutinabase" class="modal bottom-sheet">
+    <div class="modal-content">
+        <a href="#!" class="col s12 right modal-close waves-effect waves-green">
+            <i class="material-icons dp48 c3">cancel</i>
+        </a>
+        <h5 data-tr="rutina_asaltos_modal">Rutina de asaltos</h5>
+        <p data-tr="rutina_asaltos_modal_body">Decide el numero de asaltos, cuanto quieres que dure cada asalto y el
+            tiempo de descanso entre cada uno</p>
+        <!-- Textfield with Floating Label -->
+
+        <div class="row">
+            <div class="row col s12 m6">
+                <div class="range-slider center">
+                    <h6 for="asaltos" data-tr="numero_asaltos">Número de asaltos</h6>
+                    <input class="calibrado" id="asaltos" name="asaltos" min="1" max="15" placeholder="1 - 15"
+                        type="number" value="1" data-toggle-bubble="true" data-thumb-color="#00ADB5">
+                </div>
+            </div>
+            <div class="row col s12 m6">
+                <div class="range-slider center">
+                    <h6 for="tiempo" data-tr="tiempo_asalto_min">Tiempo de cada asalto (min)</h6>
+                    <input class="calibrado" id="tiempo" name="tiempo" class="tiempo" min="1" max="20"
+                        placeholder="1 - 20" type="number" value="1" data-toggle-bubble="true"
+                        data-thumb-color="#00ADB5">
+                </div>
+            </div>
+            <div class="row col s12 m6">
+                <div class="range-slider center">
+                    <h6 for="tdescanso" data-tr="tiempo_descanso">Tiempo de descanso entre asaltos (seg)</h6>
+                    <input class="calibrado" id="tdescanso" class="tdescanso" name="tdescanso" min="1" max="120"
+                        placeholder="1 - 120" type="number" value="1" data-toggle-bubble="true"
+                        data-thumb-color="#00ADB5">
+                </div>
+            </div>
+            <div class="row col s12 m6 right">
+                <a class="halfway-fab right waves-effect waves-light b3 btn modal-trigger" style="margin-top:30px"
+                    onclick="guardaRutinas('rutinabasica');" href="#">
+                    <i class="fas fa-play"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Structure Boxeador vs saco -->
+<div id="modalvssaco" class="modal bottom-sheet">
+    <div class="modal-content">
+        <a href="#!" class="col s12 right modal-close waves-effect waves-green">
+            <i class="material-icons dp48 c3">cancel</i>
+        </a>
+        <h5 data-tr="boxeador_saco_modal">Tu contra el saco</h5>
+        <p data-tr="boxeador_saco_modal_body">Un combate a muerte contra el saco con 12 asaltos para dejar K.O. al saco</p>
+        <div class="row">
+            <div class="range-slider center">
+                <h6 for="nivel" data-tr="nivel_dificultad">Nivel de dificultad</h6>
+                <input id="nivel" name="nivel" min="1" max="5" placeholder="1 - 5" type="number" value="1" data-toggle-bubble="true" data-thumb-color="#00ADB5">
+            </div>
+        </div>
+
+        <div class="row col s12 right">
+            <a class="halfway-fab waves-effect waves-light b3 btn modal-trigger" onclick="guardaRutinas('nivel');" href="#">
+                <i class="fas fa-play"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="modalgolpes" class="modal bottom-sheet">
+    <div class="modal-content">
+        <a href="#!" class="col s12 right modal-close waves-effect waves-green">
+            <i class="material-icons dp48 c3">cancel</i>
+        </a>
+        <h5 data-tr="golpes_maximo_modal">Golpes al máximo</h5>
+        <p data-tr="golpes_maximo_modal_body">Fija tu objetivo de golpes por asalto</p>
+        <div class="row">
+            <div class="range-slider col s12 m6 center">
+                <h6 for="golpes" data-tr="numero_golpes">Número de Golpes</h6>
+                <input id="golpes" name="golpes" min="5" max="999" placeholder="5 - 999" type="number" value="10"
+                    data-toggle-bubble="true" data-thumb-color="#00ADB5">
+            </div>
+            <div class="range-slider col s12 m6 center">
+                <h6 for="asaltosg" data-tr="numero_asaltos">Número de asaltos</h6>
+                <input id="asaltosg" name="asaltosg" min="1" max="100" placeholder="1 - 100" type="number" value="1"
+                    data-toggle-bubble="true" data-thumb-color="#00ADB5">
+            </div>
+            <div class="range-slider col s12 m6 center">
+                <h6 for="tiempog" data-tr="tiempo_asalto">Tiempo por asalto (seg)</h6>
+                <input id="tiempog" name="tiempog" min="10" max="180" placeholder="10 - 180" type="number" value="10"
+                    data-toggle-bubble="true" data-thumb-color="#00ADB5">
+            </div>
+            <div class="range-slider col s12 m6 center">
+                <h6 for="tdescansog" data-tr="tiempo_descanso">Tiempo de descanso entre asaltos (seg)</h6>
+                <input id="tdescansog" name="tdescansog" min="1" max="60" placeholder="1 - 60" type="number" value="1"
+                    data-toggle-bubble="true" data-thumb-color="#00ADB5">
+            </div>
+        </div>
+        <div class="row col s12 right">
+            <a class="halfway-fab waves-effect waves-light b3 btn modal-trigger" onclick="guardaRutinas('golpes');"
+                href="#">
+                <i class="fas fa-play"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Structure machaca caras TODO:FACES-->
+<!--
+<div id="modalFaces" style="padding: 20px" class="">
+    <a href="#!" class="col s12 right modal-close waves-effect waves-green">
+        <a href="#!" class="cancelFaces right">
+            <i class="material-icons dp48 c3">cancel</i>
+        </a>
+        <h5 >Machaca caras</h5>
+        <p >Descripción machaca caras...</p>
+
+<link rel="stylesheet" href="cropme/cropme.min.css">
+<link rel="stylesheet" href="css/faces.css">
+
+<div id="modalRecortarImg" style="border-radius: 15px;" class="">
+    <div id="recortarImg">
+        <div id="container"></div>
+        <img src="" id="myImage" />
+    </div>
+    <div class="halfway-fab waves-effect waves-light">
+        <input type="file" id="fichero" />
+    </div>
+</div>
+<button id="cortar" >Cortar</button>
+<script src="cropme/cropme.min.js"></script>
+<script src="js/faces.js"></script>
+        <div class="">
+            
+            <a href="#" id="cargaCropme">
+            <div class="demo-container" style="margin-left:-99999px;position: absolute">
+                <img id="img" src="" />
+            </div>
+            </a>
+            <button id="stop">Stop</button>
+            <button id="bucle">bucle</button>
+            <label>Golpes: <span id="numGolpes"></span></label>
+            <br />
+
+            <div class="row col s12 m6">
+                <div class="range-slider center">
+                    <h6 for="asaltos" data-tr="numero_asaltos">Número de asaltos</h6>
+                    <input class="calibrado" id="asaltos" name="asaltos" min="1" max="15" placeholder="1 - 15"
+                        type="number" value="1" data-toggle-bubble="true" data-thumb-color="#00ADB5">
+                </div>
+            </div>
+            <div class="row col s12 m6">
+                <div class="range-slider center">
+                    <h6 for="tiempo" data-tr="tiempo_asalto_min">Tiempo de cada asalto (min)</h6>
+                    <input class="calibrado" id="tiempo" name="tiempo" class="tiempo" min="1" max="20"
+                        placeholder="1 - 20" type="number" value="1" data-toggle-bubble="true"
+                        data-thumb-color="#00ADB5">
+                </div>
+            </div>
+            <div class="row col s12 m6">
+                <div class="range-slider center">
+                    <h6 for="tdescanso" data-tr="tiempo_descanso">Tiempo de descanso entre asaltos (seg)</h6>
+                    <input class="calibrado" id="tdescanso" class="tdescanso" name="tdescanso" min="1" max="120"
+                        placeholder="1 - 120" type="number" value="1" data-toggle-bubble="true"
+                        data-thumb-color="#00ADB5">
+                </div>
+            </div>
+            <div class="row col s12 m6 right">
+                <a class="halfway-fab right waves-effect waves-light b3 btn modal-trigger" style="margin-top:30px"
+                    onclick="guardaRutinas('rutinabasica');" href="#">
+                    <i class="fas fa-play"></i>
+                </a>
+            </div>--
+        </div>
+    </div>
+</div>-->
+
+<!--<script>
+    $(".muestraFaces").on("click",function(){
+        $("nav").hide()
+        $(".desafios-all").hide()
+        $("#modalFaces").show('top')
+    })
+
+    $(".cancelFaces").on("click", function () {
+            $("nav").show()
+            $(".desafios-all").show('top')
+            $("#modalFaces").hide()
+        })
+</script>-->
+
+
+<script src="js/bubleslim.js"></script>
+<script src="js/desafios.js"></script>
+<!--
+<script src="build/tracking-min.js"></script>
+<script src="build/data/face-min.js"></script>
+<script src="build/data/eye-min.js"></script>
+<script src="build/data/mouth-min.js"></script>
+
+
+
+
+<script>
+    setTimeout(function () {
+        $(".cancelFaces").click()
+    }, 1000)
+</script>
+-->

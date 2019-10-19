@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Boxing Lab",
+  "short_name": "Boxing Lab",
+  "version": "io.cordova.boxinglab",
+  "description": "Haz que tu saco de boxeo sea inteligente",
+  "author": "Roberto Jiménez Valle",
+  "icons": [],
+  "start_url": "index.html"
+}

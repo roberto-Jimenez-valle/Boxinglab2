@@ -1,0 +1,143 @@
+/* I'm using Ubuntu Condensed font
+/* instead of the original shot font,
+/* I think Ubuntu font is a better fit,
+/* What do you think? 
+/* **************************** */
+
+* {box-sizing:border-box}
+
+.paper {
+  border-radius:4px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.15);
+  top:50px;
+  right:50%
+}
+
+.box {width:100%;height:100%;overflow:hidden;border-radius:4px}
+
+.item {
+  height:100px;
+  padding:20px;
+  box-shadow: 0 4px 5px rgba(0,0,0,.3);
+  position:relative;
+  font-size:21px;
+  -webkit-transition:all 200ms ease;
+  transition:all 200ms ease;
+}
+
+.item>.box>p {
+  line-height:60px;
+  -webkit-transition:all 200ms ease;
+  transition:all 200ms ease;
+}
+.detail {
+  font-size:17px;
+  -webkit-transition:all 200ms ease;
+  transition:all 200ms ease;
+  opacity:0
+ 
+}
+.detail div {line-height:35px}
+.detail .counter,.detail p {float:left;width:50%}
+.detail>div {float:left;width:100%}
+.detail .counter {text-align:right}
+.detail .counter div {
+ width:29px;
+ height:20px;
+ float:right;
+ text-align:center;
+ line-height:20px;
+ margin-top:7px;
+ cursor: pointer
+}
+.detail .counter .plus {
+  margin-left:1px;
+  border-radius:0 30px 30px 0;
+}
+.detail .counter .minus {
+  margin-right:1px;
+  margin-left:11px;
+  border-radius:30px 0 0 30px;
+}
+
+.item.coffee {
+  background: #ffe26f;
+  background:linear-gradient(135deg,#ffe26f,#e8c962);
+  z-index:4;
+  color:#e07556; 
+}
+.item.coffee .detail .counter div {background: #FFF2BE}
+
+.item.sweet {
+  background: #f3825f;
+  background:linear-gradient(135deg,#f3825f,#f3825f);
+  z-index:3;
+  color:#9c3c53;
+}
+.item.sweet .detail .counter div {background: #FFC5B2}
+
+.item.food {
+  background: #a7425c;
+  background:linear-gradient(135deg,#a7425c,#993950);
+  z-index:2;
+  color:#402344;
+}
+.item.food .detail .counter div {background: #ECA9BA}
+
+.item.drink {
+  background: #563761;
+  background:linear-gradient(135deg,#563761,#502f55);
+  z-index:1;
+  color:#1c1730;
+  border-radius:0 0 4px 4px
+}
+.item.drink .detail .counter div {background: #8A7193}
+
+.item-icon {  background:url(https://image.ibb.co/b6zDSF/items_icons_t.png) no-repeat top left;
+  height:60px;
+  width:65px;
+  float:left;
+  margin-right:10px;
+  -webkit-transition:all 200ms ease;
+  transition:all 200ms ease;
+  -webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);
+}
+.item-icon.coffee {background-position:0 0}
+.item-icon.sweet {background-position:-70px 0}
+.item-icon.food {background-position:-137px 0}
+.item-icon.drink {background-position:-208px 0}
+
+/** Active **/
+.paper.item-active .item {height:60px;padding:0 20px}
+.paper.item-active .item.active {height:260px;padding:20px;-webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);}
+.item.active .item-icon {
+  -webkit-transform:scale(1.5) translateZ(0);
+  -ms-transform:scale(1.5) translateZ(0);
+  -moz-transform:scale(1.5) translateZ(0);
+  transform:scale(1.5) translateZ(0);
+  margin:0 auto;
+  float:none;
+}
+.item.active>.box>p {
+  font-size:31px;
+  text-align:center
+}
+.item.active .detail {opacity:1}
+
+/** Extra For Previewing **/
+.item .number,.paper.preview-1 .bar .action {
+    display:none
+}
+
+/** making some things unselectable **/
+.item>.box>p,.counter {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.item>.box>p {
+  cursor: default
+}
+ 

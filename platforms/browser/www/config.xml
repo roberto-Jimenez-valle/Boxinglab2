@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.boxinglab" version="2.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Boxing Lab</name>
+    <description>
+        Haz que tu saco de boxeo sea inteligente
+    </description>
+    <author email="info@boxinglab.es" href="http://boxinglab.es">
+       Roberto Jiménez Valle
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <universal-links>
+        <host name="https://pyzs8.app.goo.gl/6DtX" scheme="https" />
+        <host name="app-box-lab.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback" />
+        </host>
+    </universal-links>
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>

@@ -1,0 +1,176 @@
+
+ 
+.demo-title {
+  position: absolute;
+  width: 100%;
+  background: #2e2f33;
+  z-index: 2;
+  padding: .7em 0;
+} 
+
+.demo-title a {
+  color: #fff;
+  border-bottom: 1px dotted #a64ceb;
+  text-decoration: none;
+}
+
+.demo-title p {
+  color: #fff;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 15px;
+}
+
+.demo-frame {
+  background: url(frame.png) no-repeat;
+  width: 854px;
+  height: 658px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -329px 0 0 -429px;
+  padding: 95px 20px 45px 34px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.demo-container {
+  width: 100%;
+  height: 530px;
+  position: relative;
+  background: #eee;
+  overflow: hidden;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.dg.ac {
+  z-index: 100 !important;
+  top: 50px !important;
+}
+
+.rect {
+    border: 1px solid #ccc;
+    left: -1000px;
+    position: absolute;
+    top: -1000px;
+    border-style: groove;
+    
+  }
+
+  .demo-container {
+    width: 100% !important;
+  }
+
+
+/*ojos*/
+.ojos{
+    position: absolute;
+    opacity: 0.6;
+  }
+
+.heridas{
+    position: absolute;
+    opacity: 0.7;
+  }
+
+
+  .moraton{
+    background: url('img/moratonGeneral.png');
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    opacity: 0.6;
+  }
+
+  .moraton1{
+    background: url('img/moraton1.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.8;
+    background-size: contain;
+  }
+
+  .moraton2{
+    background: url('img/moraton2.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.95;
+    background-size: contain;
+  }
+
+   .moraton3{
+    background: url('img/inchazon.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.7;
+    background-size: contain;
+  }
+
+  .herida1{
+    background: url('img/herida1.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.9;
+    background-size: contain;
+  }
+
+  .labios{
+    background: url('img/labios.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.95;
+    background-size: contain;
+  }
+
+  #img {
+    position: absolute;
+    width: 80%
+  }
+  
+  .slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+.cropme-wrapper{
+      background-color: #333333b5;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

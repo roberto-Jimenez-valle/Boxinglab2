@@ -1,0 +1,46 @@
+<link href="css/historia.css" rel="stylesheet">
+<h5 id="nodata" data-tr="noHayDatos" style="display:none;position: absolute;color: white;margin-top: 50px;z-index: 99;" class="col s12 center">No hay datos</h5>
+<img id="mascara" src="img/mascara.png" style="position: absolute;z-index: 99;margin-left:-1400px">
+<div class="chartAreaWrapper b2">
+    <div class="chartAreaWrapper2">
+        <canvas id="myChart" style="width:100%"></canvas>
+    </div>
+</div>
+<div class="center-align flow-text col s12" id="rfecha"></div>
+<div class="row center panelinfo" style="margin-bottom: 0px;">
+    <div class=" col s4">
+        <p data-tr="golpes">Golpes</p>
+        <span id="rgolpes">0</span>
+        <i class="fas fa-chart-bar"></i>
+    </div>
+    <div class=" col s4">
+        <p data-tr="fuerza_media">Fuerza Media</p>
+        <span id="fmediar">0</span>
+        <i class="fas fa-chart-area"></i>
+    </div>
+    <div class=" col s4">
+        <p data-tr="mayor_golpe">Mayor golpe</p>
+        <span id="mgolper">0</span>
+        <i class="fas fa-chart-line"></i>
+    </div>
+    <div class=" col s4">
+        <p data-tr="calorias">Calorias</p>
+        <span id="caloriasr">0</span>
+        <i class="material-icons">whatshot</i>
+    </div>
+    <div class=" col s4">
+        <p data-tr="objetivo">Objetivo</p>
+        <span id="objetivor">0</span>
+        <i class="fas fa-percent"></i>
+    </div>
+    <div class=" col s4">
+        <p data-tr="tiempo_total">Tiempo total</p>
+        <span id="tiempot">0</span>
+        <i>'</i>
+    </div>
+</div>
+<div id="cubreChart" style="position: absolute;width:100%;z-index:99;margin-top:30px;"></div>
+<div class="chart-container col s12" style="position: absolute;width:100%; margin-top:30px;">
+    <canvas id="chart" ></canvas>
+</div>
+<script type="text/javascript" src="js/historia.js"></script>

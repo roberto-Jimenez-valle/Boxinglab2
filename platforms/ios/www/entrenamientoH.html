@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<head>
+    <title>Boxing lab</title>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="css/iconsMaterialDesign.css" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <script src="js/tweenMax.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/comun.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/comunInicio.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/entrenamientoH.css" media="screen,projection" />
+<script>
+    var totalSeg = 0;
+    var sacoBoxeo = 21;
+    var nivel = 4;
+    var rondas = 0;
+    var usu=null;
+</script>
+
+<script src="js/firebase-5.0.3.js"></script>
+<script type="text/javascript" src="fonts/iconsAwesome.js"></script>
+<script type="text/javascript" src="js/firebase.js"></script>
+<script type="text/javascript" src="js/animateNumber.js"></script>
+<link href="css/circle.css" rel="stylesheet">
+<script type="text/javascript" src="js/database.js"></script>
+<script type="text/javascript" src="js/idiomas.js"></script>
+
+<script type="text/javascript" src="js/sylvester.src.js"></script>
+<script type="text/javascript" src="js/kalman.js"></script>
+</head>
+<body class="b2">
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal b2">
+        <div class="modal-content b2">
+            <h4 class="titulo c3" data-tr="alerta">Alerta</h4>
+            <p class="texto c4" data-tr="seguro-reiniciar">¿Estás seguro de reiniciar el desafío?</p>
+        </div>
+        <div class="modal-footer b2">
+            <a href="#!" onclick="stopStart()" class="modal-action modal-close waves-effect waves-green btn-flat c4 b3" data-tr="cancelar">Cancelar</a>
+            <a href="javascript:location.reload()" class="modal-action modal-close waves-effect waves-green btn-flat c4 b3" data-tr="aceptar">Aceptar</a>
+        </div>
+    </div>
+    <div class="loader-page"></div>
+    <div class="page-logro" style="position:absolute"></div>
+    <div class="objetivo-100 row" style="position:absolute"></div>
+    <div id="entrenamiento" >
+        <div class="chart-container col s12" style="position: absolute;"></div>
+        <div class="row col s12 c4" style="z-index:100;width: 100%;margin-top:10px;margin-bottom: 0px;position: absolute;">
+            <div id="rounds" class="col s12" >
+                <span id="numronda" class="right" style="margin-right: 10px;font-size: 1.7em;"></span>
+                <a href="inicio.html">
+                    <i class="fas fa-arrow-circle-left" style="font-size:41px;color:rgb(0, 173, 181);margin:10px;margin-top:0px;"></i>
+                </a>
+            </div>
+            <span id="golpesEntrena" style="font-size: 7em;position: absolute;width:100%;margin-top:8%;" class="center"></span>
+            <img id="golpea" src="img/golpea.gif" style="position: absolute;z-index: -1;display: none">
+            <div id="rondascir" class="center" width="500px" height="500px" >
+                <br/>
+                <div class="row botonesP" style="z-index:99999">
+                    <a class="btn-floating left btn-large waves-effect waves-light b3" style="margin-left: 30%" onClick="stopStart()" id="time">
+                        <i id="timeIcoPlay" class="material-icons left">play_arrow</i>Start</a>
+                    <strong style="z-index: 99999999;font-size: 4em;"></strong>
+                    <a class="btn-floating btn-large right waves-effect waves-light b3" style="margin-right: 30%" onclick="reset()" href='#'
+                        id="time">
+                        <i id="timeIcoStop" class="material-icons left">stop</i>Reset</a>
+                </div>
+            </div>
+        </div>
+        <div class="estadisticasCir row c4" id="circuloFuerza" style="margin-top: 9%;">
+            <div id="cirFuerza" class="circlep cirestadis valign-wrapper col s3" style="z-index:999" width="50px" height="50px">
+                <div class="row col s12 rowContenidoCir">
+                    <strong class="col s6 left" style="z-index: 99;"></strong>
+                    <i class="material-icons small col s6"></i>
+                    <span class="center col s10" data-tr="fuerza">Fuerza</span>
+                </div>
+            </div>
+        </div>
+        <div class="estadisticasCir row c4" id="circuloGolpes" style="margin-top: 30%">
+            <div id="cirGolpes" class="circlep cirestadis valign-wrapper col s3" style="z-index:999" width="50px" height="50px" >
+                <div class="row col s12 rowContenidoCir">
+                    <strong class="col s6 left" style="z-index: 99;"></strong>
+                    <i class="material-icons small col s6"></i>
+                    <span class="center col s10"  data-tr="intensidad">Intensidad</span>
+                </div>
+            </div>
+        </div>
+        <div class="estadisticasCir row c4" id="circuloCalorias" style="margin-top: 9%">
+            <div id="cirCalorias" class="right circlep cirestadis col valign-wrapper s3" style="z-index:999" width="50px" height="50px" >
+                <div class="row col s12 rowContenidoCir">
+                    <strong class="col s6 left" style="z-index: 99;"></strong>
+                    <i class="material-icons small col s6">whatshot</i>
+                    <span class="center col s10"  data-tr="calorias">Calorias</span>
+                </div>
+            </div>
+        </div>
+        <div class="estadisticasCir row c4" id="circuloObjetivo" style="margin-top: 30%">
+            <div id="cirObjetivo" class="right circlep cirestadis col valign-wrapper s3" style="z-index:999" width="50px" height="50px" >
+                <div class="row col s12 rowContenidoCir">
+                    <strong class="col s6 left" style="z-index: 999;"></strong>
+                    <i class="material-icons small col s6">insert_emoticon</i>
+                    <span class="center col s10"  data-tr="objetivo">Objetivo</span>
+                </div>
+            </div>
+        </div>
+        <div class="res row col s12"></div>
+    </div>
+    <script type="text/javascript" src="js/funcionesGenerales.js"></script>
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript" src="js/circleprogress.js"></script>
+    <script type="text/javascript" src="js/cronometro.js"></script>
+    <script type="text/javascript" src="js/entrenamientos.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Boxing lab</title>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="css/iconsMaterialDesign.css" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <script src="js/tweenMax.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/comun.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/comunInicio.css" media="screen,projection" />
+    <script type="text/javascript" src="fonts/iconsAwesome.js"></script>
+    <script type="text/javascript" src="js/idiomas.js"></script>
+</head>
+
+<body class="b2">
+<link type="text/css" rel="stylesheet" href="css/logro.css" />
+
+<div class="botones col s12" style="margin-top:15px;">
+    <a href="inicio.html">
+        <i class="fas fa-arrow-circle-left" style="font-size:41px;color:rgb(0, 173, 181);margin:10px;margin-top:0px;"></i>
+    </a>
+</div>
+<div>
+    <div class="row center" id="premios">
+        <img id="foto" src="img/ganador.svg" >
+    </div>
+    <div id="contenedor-logro" class="row col s12 center">
+        <img id="logo" src="img/logo-transparente.svg" style="display:none;height: 33px;width: auto;position: absolute;margin-top: -59px;margin-left: 10px;">
+        <img id="imgCinto" src="" style="margin-top:-50px">
+        <div style="position: absolute;left:0px" id="cuadroResultados" class="col s12">
+            <div class="row" id="contenedor-Resultados">
+                <div id="valor" class="col s12">
+                    <div class="num"></div>
+                </div>
+                <div id="golpes" class="col s12"><div data-tr="golpes">Golpes</div><div class="num"></div></div>
+                <div id="fuerza" class="col s6"><div data-tr="fuerza">Fuerza</div><div class="num"></div></div>
+                <div id="calorias" class="col s6 right"><div data-tr="calorias">Calorías</div><div class="num"></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="botones" style="position: relative; height: 70px;">
+    <div class="fixed-action-btn click-to-toggle direction-left" >
+        <a class="btn-floating btn-large waves-effect waves-light "><i class="material-icons">add</i></a>
+        <ul>
+            <li>
+                <a href="#" id="button-action" class="btn-floating btn-large waves-effect waves-light "><i class="material-icons">add_a_photo</i></a>
+            </li>
+            <li>
+                <a href="#" id="button-gallery" class="btn-floating btn-large waves-effect waves-light "><i class="material-icons">image</i></a>
+            </li>
+            <li>
+                <a class="btn-floating btn-large waves-effect waves-light" href="#" onClick="otherShare()">
+                    <i class="material-icons">share</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="js/funcionesGenerales.js"></script>
+<script type="text/javascript" src="js/logro.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+ @font-face {
+    font-family: "campus";
+    src:url('../fonts/CAMPUS.ttf') format('truetype');
+    }
+
+#golpes{
+    font-size: -webkit-xxx-large;
+}
+#golpes .num{
+    margin-top: -54px;
+    font-size: 50px;
+}
+#contenedor-Resultados{
+    font-size: 29px;
+    color: #fff; 
+    font-family: campus;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 0px;
+    left:0px;
+}
+
+#golpes{
+    background: -webkit-linear-gradient(#66fe70,#00ADB5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 77px;
+}
+#fuerza{
+    background: -webkit-linear-gradient(#478a11,#95de54);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -16px;
+}
+#calorias{
+    margin-top: -16px;
+    background: -webkit-linear-gradient(#FFBD33,#FC1111);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#fuerza .num{
+    margin-top: -20px;
+}
+#calorias .num{
+    margin-top: -20px;
+}
+
+.num{
+    font-family: sans-serif;
+    color:#fff;
+}
+#premios{
+        margin-top: -10px;
+}
+
+.page-logro{
+    background: rgba(155,155,151,1);
+    background: -moz-linear-gradient(top, rgba(155,155,151,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(155,155,151,1) 0%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(155,155,151,1) 0%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(155,155,151,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(155,155,151,1) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b9b97', endColorstr='#000000', GradientType=0 );
+}
+
+.button-container{
+    color:rgb(0, 173, 181);
+    margin-top: -30px;
+}
+
+#contenedor-logro{
+    margin-top: -40px;
+}
+
+#foto{
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+#valor {
+    font-size: 2em;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: -30px;
+    color: #8f7108;;
+}

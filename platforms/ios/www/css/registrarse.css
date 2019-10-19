@@ -1,0 +1,10 @@
+.col{
+    margin-top:20px;
+}
+#idiomas-nav a{
+    float: left;
+    width: 40px;
+}
+#idiomas-nav a:hover{
+    background-color: #ffffff
+}

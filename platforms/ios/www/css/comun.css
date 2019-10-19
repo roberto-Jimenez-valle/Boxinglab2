@@ -1,0 +1,52 @@
+.b0{
+    background-color: #000000 !important;
+}
+
+.b1{
+    background-color: #222831 !important;
+}
+.b2{
+    background-color: #393E46 !important;
+}
+.b3{
+    background-color: #00ADB5 !important;
+}
+.b4{
+    background-color: #EEE !important;
+}
+
+
+.c1{
+    color:#222831 !important;
+}
+.c2{
+    color:#393E46 !important;
+}
+.c3{
+    color:#00ADB5 !important;
+}
+.c4{
+    color:#EEE !important;
+}
+
+.side-nav li>a svg{
+    font-size: 1.5em;
+    color: #757575;
+    margin-right: 10px;
+    width: 25px !important;
+}
+
+div svg {
+    font-size: 20px !important;
+}
+
+.centrado-vertical{
+    margin: 0px;
+	padding:0px;
+	float: left;
+	width:100%;
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	left:50%;
+}

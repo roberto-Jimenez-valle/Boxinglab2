@@ -1,0 +1,68 @@
+
+
+<div class="row c4">
+    <div style="position:absolute">
+        <a href="inicio.html">
+            <i class="fas fa-arrow-circle-left" style="font-size:41px;color:rgb(0, 173, 181);margin:10px;margin-top:0px;"></i>
+        </a>
+    </div>
+    <h5 class="col center s12" data-tr="edita_tu_perfil">Edita tu perfil</h5>
+    <form class="col s12" id="registrarse">
+        <div class="row" action="#">
+            <div class="input-field col s12">
+                <div id="idiomas-nav">
+                    <a href="#" onclick="cambiarIdioma('es');">
+                        <img width="36px" src="img/spain.png">
+                    </a>
+                    <a href="#" onclick="cambiarIdioma('en');">
+                        <img width="36px" src="img/ingles.png">
+                    </a>
+                    <a href="#" onclick="cambiarIdioma('persa');">
+                        <img width="49px" src="img/idiomaPersa.png">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" action="#">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="nombre" type="text" class="validate">
+                <label for="icon_prefix" data-tr="nombre_completo">Nombre completo</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">cake</i>
+                <input type="text" id="fechanacimiento" class="datepicker">
+                <label for="icon_prefix" data-tr="fecha_nacimiento">Fecha de nacimiento</label>
+            </div>
+        </div>
+        <p class="col s6 center">
+            <input name="sexo" class="with-gap" type="radio" id="hombre" checked/>
+            <label for="hombre" data-tr="hombre">Hombre</label>
+        </p>
+        <p class="col s6">
+            <input name="sexo" class="with-gap" type="radio" id="mujer" />
+            <label for="mujer" data-tr="mujer">Mujer</label>
+        </p>
+        <div class="row">
+            <div class="range-slider col s12">
+                <h6 for="example-2" data-tr="peso_kg">Peso (Kg)</h6>
+                <input class="peso" id="example-2" name="example-2" min="30" max="250" placeholder="30 - 250" type="number" value="60" data-toggle-bubble="true"
+                    data-thumb-color="#00ADB5">
+            </div>
+        </div>
+        <div class="row">
+            <div class="range-slider col s12">
+                <h6 for="example-3" data-tr="medida_cm">Medida (Cm)</h6>
+                <input class="altura" id="example-3" name="example-3" min="100" max="230" placeholder="100 - 230" type="number" value="150"
+                    data-toggle-bubble="true" data-thumb-color="#00ADB5">
+            </div>
+        </div>
+        <div class="row center col s12">
+            <a class="waves-effect waves-light btn-large b3" onclick="guardar()" data-tr="guardar">Guardar</a>
+        </div>
+    </form>
+</div>

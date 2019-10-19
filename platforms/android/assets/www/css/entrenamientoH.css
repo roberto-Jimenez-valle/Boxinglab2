@@ -1,0 +1,150 @@
+body{ overflow:hidden}
+    
+#circle{
+    padding: 15px;
+}
+    
+.circles {
+  margin-bottom: -10px;
+}
+
+.circle {
+  width: 500px;
+  margin: 6px 6px 20px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.circle canvas {
+  vertical-align: top;
+      margin-bottom: 25px;
+}
+
+.circle strong {
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 60px;
+}
+.circle strong.golpes {
+  position: absolute;
+  top: 140px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 60px;
+}
+
+.circle strong i {
+  font-style: normal;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+
+.circle span {
+  display: block;
+  color: #aaa;
+  margin-top: 12px;
+}
+
+p {
+  margin: 40px 0;
+}
+
+#rounds{
+    position: fixed;
+    z-index:99999;
+}
+
+.botonesP a{
+	
+}
+
+.cirestadis strong{
+	font-size:2.3em;
+}
+
+.circlep canvas{
+	position:absolute
+}
+.circlep i,.circlep strong{
+	width: 100%;
+}
+
+.rowContenidoCir{
+	margin-top: 30%;
+}
+
+.circlep strong{
+    font-size: 24px;
+}
+#cabeceraLogo{
+    padding: 8px;
+    height: 70px;
+    padding-left: 0;
+  }
+  nav.nav-extended .nav-wrapper {
+    max-height: 56px;
+}
+
+i.material-icons.small.col.s6.right {
+    width: 34%;
+}
+
+  .loader-page {
+    position: fixed;
+    z-index: 25000;
+    background: rgb(255, 255, 255);
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:all .3s ease;
+  }
+  .loader-page::before {
+    content: "";
+    position: absolute;
+    border: 2px solid rgb(50, 150, 176);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-left: 2px solid rgba(50, 150, 176,0);
+    border-top: 2px solid rgba(50, 150, 176,0);
+    animation: rotarload 1s linear infinite;
+    transform: rotate(0deg);
+  }
+
+  .estadisticasCir{position: absolute; width: 100%; padding: 0px 10px 0px 20px;}
+
+    #social-icons a{
+        display: inline;
+    }
+
+    div#social-icons a i,div#social-icons a {
+        max-height: 23px;
+        display: inline-table;
+    }
+
+    div#social-icons a:hover {
+        background-color: #ffffff
+    }
+
+    #idiomas-nav{
+        margin-top:30px;
+    }
+
+    #idiomas-nav a{
+        float: left;
+        width: 40px;
+    }
+    #idiomas-nav a:hover{
+        background-color: #ffffff
+    }

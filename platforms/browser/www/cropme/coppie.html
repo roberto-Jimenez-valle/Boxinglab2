@@ -1,0 +1,78 @@
+<html>
+<!--    -webkit-transform: rotate(28deg);-->
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.3/croppie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <!-- or use image tag -->
+    <img src="../img/rostroBoxeador.jpg" id="myImage" />
+
+    <button id="cortar">Cortar</button>
+    <img src="" id="cortada" />
+    <input type="file" id="fichero" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.3/croppie.js"></script>
+    <script>
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.cropme-container img').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
+
+        $(function () {
+            var imgcrop= $('#myImage').croppie({
+                enableExif: true,
+                viewport: {
+                    width: 200,
+                    height: 200,
+                    type: 'circle'
+                },
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+
+            imgcrop.croppie('bind', {
+                url: $("#myImage").attr("src"),
+                points: [77, 469, 280, 739]
+            });
+           
+
+            $("#cortar").on("click",function(){
+                //size: "original", format: "png", quality: 1, circle: true 
+                var opc={ type: "html"};
+                imgcrop.croppie('result', 'html').then(function (html) {
+                    $("#cortada").attr("src",html)
+                });
+            })
+
+            $("#fichero").on("change", function () {
+
+                readURL(this);
+
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>

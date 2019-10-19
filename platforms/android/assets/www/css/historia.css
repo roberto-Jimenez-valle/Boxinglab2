@@ -1,0 +1,47 @@
+.chartWrapper {
+    position: relative;
+
+}
+
+.chartWrapper > canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events:none;
+
+}
+.chartAreaWrapper {
+  overflow-x: scroll;
+    position: relative;
+    width: 100%;
+}
+.chartAreaWrapper2 {
+
+    position: relative;
+    height: 150px;
+}
+#rfecha{
+    border-top: 2px solid #00ADB5;
+}
+
+.panelinfo .col span{
+    font-size: 1.8em;
+}
+.col p{
+    font-size: 1em;
+}
+div.col i{
+    font-size: 1.6em;
+}
+
+div.panelinfo{
+    color: #666;
+}
+
+div.panelinfo div.col.s4 p {
+    margin-bottom: 0px;
+}
+
+.modal.bottom-sheet {
+    max-height: 80%;
+}
